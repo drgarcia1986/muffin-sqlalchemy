@@ -8,7 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __project__ = "muffin-sqlalchemy"
 __author__ = "Diego Garcia <drgarcia1986@gmail.com>"
 __license__ = "MIT"
