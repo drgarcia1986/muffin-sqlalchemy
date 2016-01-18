@@ -4,7 +4,7 @@ Muffin-SqlAlchemy
 
 .. _description:
 
-Muffin-Alchemy -- A simple sqlalchemy helper plugin for muffin_ framework.
+Muffin-SqlAlchemy -- A simple sqlalchemy helper plugin for muffin_ framework.
 
 .. _badges:
 
