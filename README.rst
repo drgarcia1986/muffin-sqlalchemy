@@ -70,7 +70,7 @@ Options
 -------
 
 ========================== ==============================================================
- *SQLALCHEMY_ENGINE*       Engine to connect in database  (``sqlite:///muffin.db``)
+ *SQLALCHEMY_DATABASE_URI* URI of database (``sqlite:///muffin.db``)
 ========================== ==============================================================
 
 Commands

@@ -41,7 +41,7 @@ def app(loop):
 
 def test_plugin_register(app):
     assert 'sqlalchemy' in app.ps
-    assert 'engine' in app.ps.sqlalchemy.cfg
+    assert 'database_uri' in app.ps.sqlalchemy.cfg
 
 
 def test_create_database_command(app, capsys):

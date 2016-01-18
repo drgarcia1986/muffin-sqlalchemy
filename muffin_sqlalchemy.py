@@ -23,7 +23,7 @@ class Plugin(BasePlugin):
 
     name = 'sqlalchemy'
     defaults = {
-        'engine': 'sqlite:///muffin.db',
+        'database_uri': 'sqlite:///muffin.db',
     }
 
     def __init__(self, *args, **kwargs):
@@ -34,7 +34,7 @@ class Plugin(BasePlugin):
         """ Setup self. """
         super().setup(app)
 
-        self.sqlalchemy_engine = create_engine(self.cfg.engine)
+        self.sqlalchemy_engine = create_engine(self.cfg.database_uri)
         self.session_builder = sessionmaker(bind=self.sqlalchemy_engine)
 
         @app.manage.command
