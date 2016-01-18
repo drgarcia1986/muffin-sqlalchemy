@@ -101,7 +101,7 @@ at https://github.com/drgarcia1986/muffin-sqlalchemy/issues
 Contributing
 ============
 
-Development of Muffin-Memcached happens at: https://github.com/drgarcia1986/muffin-sqlalchemy
+Development of Muffin-SqlAlchemy happens at: https://github.com/drgarcia1986/muffin-sqlalchemy
 
 
 Contributors

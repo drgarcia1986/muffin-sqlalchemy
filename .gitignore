@@ -50,3 +50,5 @@ docs/_build
 # cache
 .cache
 
+# sqllite db
+*.db
