@@ -44,16 +44,8 @@ class Plugin(BasePlugin):
             )
             print('OK')
 
-    def start(self, app):
-        """ Start plugin. """
-        pass
-
-    def finish(self, app):
-        """ Finish plugin. """
-        pass
-
     @asyncio.coroutine
-    def middleware_factory(self, app, handler):
+    def sqlalchemy_middleware(self, app, handler):
         """Set session from request."""
 
         @asyncio.coroutine
@@ -62,3 +54,11 @@ class Plugin(BasePlugin):
             return (yield from handler(request))
 
         return middleware
+
+    def start(self, app):
+        """ Start plugin. """
+        app.middlewares.insert(0, self.sqlalchemy_middleware)
+
+    def finish(self, app):
+        """ Finish plugin. """
+        pass
