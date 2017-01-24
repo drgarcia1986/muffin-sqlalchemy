@@ -51,7 +51,9 @@ class Plugin(BasePlugin):
         @asyncio.coroutine
         def middleware(request):
             request.sqlalchemy_session = self.session_builder()
-            return (yield from handler(request))
+            response = yield from handler(request)
+            request.sqlalchemy_session.close()
+            return response
 
         return middleware
 
